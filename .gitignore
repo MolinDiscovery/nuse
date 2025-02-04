@@ -1,0 +1,5 @@
+/.DS_Store
+/MANIFEST.in
+/dist
+/nuse.egg-info
+/setup.py
