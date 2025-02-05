@@ -2,7 +2,7 @@
 
 nuse is a simple resource monitoring tool for SLURM jobs. It allows users to view the CPU and memory usage logs for individual jobs and the entire node. With nuse, when running a SLURM-based workflow, you can easily monitor resource consumption through command-line tools.
 
-![nuse logo](images/nuse_example.png)
+![nuse example](https://raw.githubusercontent.com/MolinDiscovery/nuse/main/images/nuse_example.png)
 
 ## Features
 
@@ -55,7 +55,6 @@ export MONITOR_LOG_DIR="/path/to/your/log_directory"
 When included in your SLURM job pipeline (via start_monitoring(filter_cgroup=True) from the nuse package), nuse will:
 
 * Create a job-specific log file with a naming convention like cpu_memory_usage_<hostname>.cluster_<SLURM_JOB_ID>.log.
-* Also create a node-wide log file named cpu_memory_usage_<hostname>_node.log for monitoring overall resources.
 
 Then, the nuse CLI tool uses these logs to provide an easy-to-read, real-time view of resource usage.
 

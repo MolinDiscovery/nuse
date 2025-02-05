@@ -3,3 +3,5 @@
 /dist
 /nuse.egg-info
 /setup.py
+/build
+/.gitignore
