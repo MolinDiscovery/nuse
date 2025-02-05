@@ -21,7 +21,7 @@ pip install nuse
 
 ## Usage
 
-In your script include
+In your script include.
 
 ```python
 from nuse import start_monitoring
@@ -31,6 +31,8 @@ start_monitoring(filter_cgroup=True)
 # your code
 ```
 **INFO**: You can set filter_cgroup to `False` to watch the entire node and not just your own job.
+
+**NOTE**: You should include `start_monitoring()` in the script you submit to SLRUM. Don't put it in a [submitit](https://github.com/facebookincubator/submitit) script.
 
 Job-Specific Log:
 To display the resource usage log for a specific job on a node, run in your CLI:
@@ -59,3 +61,7 @@ When included in your SLURM job pipeline (via start_monitoring(filter_cgroup=Tru
 Then, the nuse CLI tool uses these logs to provide an easy-to-read, real-time view of resource usage.
 
 Happy monitoring!
+
+## Planned improvements
+
+* `nuse clear` to remove the monitoring directory. Until then just delete the ~/.monitoring folder.
